@@ -1,3 +1,9 @@
+
+
+$( document ).ready(function() {
+
+
+
 let name = prompt("What is your Tamogatchi's name?");
 class Tamogatchi {
 	constructor(name, age, hunger, entertained, energy, ) {
@@ -15,3 +21,5 @@ class Tamogatchi {
 const firstTamogatchi = new Tamogatchi(name, 1, 10, 10, 10);
 
 console.log(firstTamogatchi);
+
+});
