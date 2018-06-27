@@ -1,0 +1,126 @@
+body {
+	border: 3px solid black;
+	border-radius: 5%;
+}
+header {
+	width: 50%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'Exo', sans-serif;
+	text-align: center;
+	color: #FA5C0C;
+	font-size: 40px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.title {
+	border: 2px solid #FA5C0C;
+	background-color: #E8E2DC;
+	border-radius: 3.5%;
+	position: relative;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 145px;
+	height: 30px;
+	padding-bottom: 15px;
+
+}
+.word {
+	text-align: center;
+	padding-bottom: 15px;
+	font-family: 'Exo', sans-serif;
+
+	
+
+}
+
+.container {
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+	border-right: 10px solid black;
+	border-bottom: 10px solid black;
+	border-radius: 50%;
+	height: 800px;
+	width: 540px;
+	max-width: 540px;
+	min-width: 540px;
+	margin: 60px auto 60px auto;
+	padding: 20px;
+	background-color: #31DEF5;
+}
+.image-container {
+	height: 200px;
+	width: 340px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px solid #FA5C0C;
+	border-radius: 3.5%;
+	background-color: #E8E2DC;
+}
+
+img {
+	margin-top: 10px;
+	height: 130px;
+	width: 110px;
+	padding: 20px;
+}
+.bounce {
+	position: relative;
+}
+
+.dark {
+	border: 2px solid #FA5C0C;
+	border-radius: 3.5%;
+	background-color: black;
+}
+
+.buttons {
+	width: 80%;
+	background-color: #BAB3AF;
+	border: 2px solid #FA5C0C;
+	border-radius: 50%;
+	margin: 120px auto;
+	padding-bottom: 55px;
+	}
+
+button {
+	outline: none;
+	height: 45px;
+	width: 77px;
+	margin-top: 60px;
+	margin-left: 48px;
+	background-color: #FA5C0C;
+	border: 2px solid black;
+	border-radius: 50%;
+	font-family: 'Exo', sans-serif;
+
+}
+
+.pet-vitals {
+	background-color: #E8E2DC;
+	color: black;
+	position: relative;
+	margin-top: 20px;
+	border: 2px solid #FA5C0C;
+
+
+}
+
+h2 {
+	display: inline;
+	margin-left: 9px;
+	margin-top: 20px;
+	font-family: 'Exo', sans-serif;
+	font-size: 12px;
+}
+
+.burger {
+	background-image: url("http://c1.cowcow.com/img/4-154932087-0-5-1");
+	background-size: cover;
+	background-position: left;
+
+}
