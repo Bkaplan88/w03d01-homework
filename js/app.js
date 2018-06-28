@@ -72,7 +72,7 @@ const hungerIncreasing = () => {
 		$(".hunger").text(`Hunger: ${firstTamogatchi.hunger++}/10`);
 	} else if (firstTamogatchi.hunger > 10) {
 		clearInterval(hungerIncreased);
-		$(".word").text(`${name} has died of hunger.`);
+		$(".word").text(`${name} Tamogatchi has died of hunger.`);
 		$(".bounce").attr("src","http://moziru.com/images/drawn-grim-reaper-animated-9.gif");
 			$(".bounce").stop();
 		gameOver();
