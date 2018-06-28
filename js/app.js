@@ -82,7 +82,7 @@ const energyDecreasing = () => {
 		alert("Your loud music has kept your pet from sleeping and now he is dead.");
 	}
 };
-const agePassed = setInterval(agePassing, minute);
+const agePassed = setInterval(agePassing, 6000);
 const hungerIncreased = setInterval(hungerIncreasing, 3500);
 const energyDecreased = setInterval(energyDecreasing, 3500);
 const entertainmentdecreased = setInterval(entertainmentDecreasing, 3500);
