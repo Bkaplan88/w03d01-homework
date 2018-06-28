@@ -3,9 +3,14 @@
 $( document ).ready(function() {
 
 
+ $("#submit-name").on("click", () => {
+ 	let name = $("#name-input").val();
+ 	console.log(name);
+ 	$(".word").text(`Hi my name is ${name}. Please love me!`).hide().fadeIn(3000);
+ 	$("#inputs").remove();
+ })
 
-let name = prompt("What is your Tamogatchi's name?");
-$(".word").text(`Hi my name is ${name}. Please love me!`).hide().fadeIn(3000);
+
 class Tamogatchi {
 	constructor(name, age, hunger, entertained, energy, ) {
 		this.name = name;
@@ -41,7 +46,12 @@ $(".hunger").text(`Hunger: ${firstTamogatchi.hunger}/10`);
 $(".entertainment").text(`Boredom: ${firstTamogatchi.entertained}/10`);
 $(".energy").text(`Energy: ${firstTamogatchi.energy}/10`);
 
-
+const gameOver = () => {
+	clearInterval(agePassing);
+	clearInterval(hungerIncreased);
+	clearInterval(energyDecreased);
+	clearInterval(entertainmentDecreased);
+};
 
 let minute = 60000;
 const agePassing = () => {
@@ -62,7 +72,11 @@ const hungerIncreasing = () => {
 		$(".hunger").text(`Hunger: ${firstTamogatchi.hunger++}/10`);
 	} else if (firstTamogatchi.hunger > 10) {
 		clearInterval(hungerIncreased);
-		alert("You forgot to feed your pet and now it's dead!")
+		$(".word").text(`${name} has died of hunger.`);
+		$(".bounce").attr("src","http://moziru.com/images/drawn-grim-reaper-animated-9.gif");
+			$(".bounce").stop();
+		gameOver();
+
 
 	}
 };
@@ -71,7 +85,11 @@ const entertainmentDecreasing = () => {
 		$(".entertainment").text(`Boredom: ${firstTamogatchi.entertained++}/10`);
 	} else if (firstTamogatchi.entertained > 10) {
 		clearInterval(entertainmentdecreased);
-		alert("You spent too much time watching netflix and now your pet has died of boredom.")
+		$(".word").text(`Tamogatchi has died of boredom.`);
+		$(".bounce").attr("src","http://moziru.com/images/drawn-grim-reaper-animated-9.gif");
+			$(".bounce").stop();
+		gameOver();
+		
 	}
 };
 const energyDecreasing = () => {
@@ -79,13 +97,16 @@ const energyDecreasing = () => {
 		$(".energy").text(`Energy: ${firstTamogatchi.energy--}/10`);
 	} else if (firstTamogatchi.energy < 0) {
 		clearInterval(energyDecreased);
-		alert("Your loud music has kept your pet from sleeping and now he is dead.");
+		$(".word").text(`Tamogatchi has died of exhaustion.`);
+		$(".bounce").attr("src","http://moziru.com/images/drawn-grim-reaper-animated-9.gif");
+			$(".bounce").stop();
+		gameOver();
 	}
 };
-const agePassed = setInterval(agePassing, 6000);
-const hungerIncreased = setInterval(hungerIncreasing, 3500);
-const energyDecreased = setInterval(energyDecreasing, 3500);
-const entertainmentdecreased = setInterval(entertainmentDecreasing, 3500);
+const agePassed = setInterval(agePassing, minute / 2);
+const hungerIncreased = setInterval(hungerIncreasing, 1000);
+const energyDecreased = setInterval(energyDecreasing, 1000);
+const entertainmentDecreased = setInterval(entertainmentDecreasing, 1000);
 
 
 console.log(firstTamogatchi);

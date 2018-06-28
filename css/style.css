@@ -15,6 +15,39 @@ h1 {
 	margin-top: 40px;
 	margin-bottom: 30px;
 }
+#inputs {
+	text-align: center;
+}
+#name-input {
+	height: 30px;
+	width: 110px;
+	border: 2px solid #FA5C0C;
+	border-radius: 5%;
+	text-align: center;
+	background-color: #E8E2DC;
+	font-family: 'Exo', sans-serif;
+	color: #FA5C0C;
+	margin-right: 10px;
+
+}
+
+::placeholder {
+	color: #FA5C0C;
+}
+
+#submit-name {
+	outline: none;
+	height: 45px;
+	width: 77px;
+	background-color: #E8E2DC ;
+	border: 2px solid #FA5C0C;
+	border-radius: 50%;
+	font-family: 'Exo', sans-serif;
+	color: #FA5C0C;
+	margin-left: 10px;
+
+
+}
 .title {
 	border: 2px solid #FA5C0C;
 	background-color: #E8E2DC;
@@ -94,9 +127,11 @@ button {
 	margin-top: 60px;
 	margin-left: 48px;
 	background-color: #FA5C0C;
-	border: 2px solid black;
+	border: 2px solid white;
+	color: white;
 	border-radius: 50%;
 	font-family: 'Exo', sans-serif;
+	font-weight: bold;
 
 }
 
