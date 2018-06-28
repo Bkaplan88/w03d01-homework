@@ -103,10 +103,10 @@ const energyDecreasing = () => {
 		gameOver();
 	}
 };
-const agePassed = setInterval(agePassing, minute / 2);
-const hungerIncreased = setInterval(hungerIncreasing, 1000);
-const energyDecreased = setInterval(energyDecreasing, 1000);
-const entertainmentDecreased = setInterval(entertainmentDecreasing, 1000);
+const agePassed = setInterval(agePassing, 7000);
+const hungerIncreased = setInterval(hungerIncreasing, 3000);
+const energyDecreased = setInterval(energyDecreasing, 3000);
+const entertainmentDecreased = setInterval(entertainmentDecreasing, 3000);
 
 
 console.log(firstTamogatchi);
