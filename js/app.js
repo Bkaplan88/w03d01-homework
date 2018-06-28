@@ -47,7 +47,7 @@ let minute = 60000;
 const agePassing = () => {
 	if (firstTamogatchi.age <= 10) {
 		$(".age").text(`Age: ${firstTamogatchi.age++}/10`);
-		if (firstTamogatchi.age === 5) {
+		if (firstTamogatchi.age === 6) {
 			alert(`${name} has morphed into a duck!`);
 			$(".bounce").attr("src","https://vignette.wikia.nocookie.net/tamagotchi/images/a/ab/Sebiretchi_Large.png/revision/latest?cb=20110909104100");
 
@@ -62,7 +62,7 @@ const hungerIncreasing = () => {
 		$(".hunger").text(`Hunger: ${firstTamogatchi.hunger++}/10`);
 	} else if (firstTamogatchi.hunger > 10) {
 		clearInterval(hungerIncreased);
-		alert("Tamogatchi has died from hunger.")
+		alert("You forgot to feed your pet and now it's dead!")
 
 	}
 };
@@ -71,7 +71,7 @@ const entertainmentDecreasing = () => {
 		$(".entertainment").text(`Boredom: ${firstTamogatchi.entertained++}/10`);
 	} else if (firstTamogatchi.entertained > 10) {
 		clearInterval(entertainmentdecreased);
-		alert("Tamogatchi has died of boredom.")
+		alert("You spent too much time watching netflix and now your pet has died of boredom.")
 	}
 };
 const energyDecreasing = () => {
@@ -79,7 +79,7 @@ const energyDecreasing = () => {
 		$(".energy").text(`Energy: ${firstTamogatchi.energy--}/10`);
 	} else if (firstTamogatchi.energy < 0) {
 		clearInterval(energyDecreased);
-		alert("Tamogatchi has died from exhaustion.");
+		alert("You didn't provide a restful place for your pet and now it has died from exhaustion.");
 	}
 };
 const agePassed = setInterval(agePassing, minute);
