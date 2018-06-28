@@ -79,7 +79,7 @@ const energyDecreasing = () => {
 		$(".energy").text(`Energy: ${firstTamogatchi.energy--}/10`);
 	} else if (firstTamogatchi.energy < 0) {
 		clearInterval(energyDecreased);
-		alert("You didn't provide a restful place for your pet and now it has died from exhaustion.");
+		alert("Your loud music has kept your pet from sleeping and now he is dead.");
 	}
 };
 const agePassed = setInterval(agePassing, minute);
@@ -89,13 +89,7 @@ const entertainmentdecreased = setInterval(entertainmentDecreasing, 3500);
 
 
 console.log(firstTamogatchi);
-// function moveUp() {
-//         $(".bounce").animate({
-//         bottom: "+=100"
-//       }, 2000, function() {
- 
-//       });
-//     }
+
 function moveRight() {
         $(".bounce").animate({
         left: "+=188"
